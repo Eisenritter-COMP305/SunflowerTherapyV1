@@ -23,7 +23,7 @@ TagManager:
   - platform
   - Ladder
   - Enemy
-  - 
+  - Background
   - 
   - 
   - 
@@ -45,9 +45,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 494033043
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 494033043
+  - name: Game
+    uniqueID: 4105091313
+    locked: 0
+  - name: Foreground
+    uniqueID: 3227777847
+    locked: 0
+  - name: UI
+    uniqueID: 1043961439
     locked: 0

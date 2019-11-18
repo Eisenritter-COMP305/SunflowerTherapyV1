@@ -148,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetInteger("AnimState", (int)PlayerAnimState.IDLE);
             else
             {
-                audioManager.Play("Running");
+  //             audioManager.Play("Running");
                 animator.SetInteger("AnimState", (int)PlayerAnimState.RUN);
             }
 
@@ -200,7 +200,7 @@ public class PlayerMovement : MonoBehaviour
             case "Coin":
                 gameController.Mp += 20; // TODO: Testing
                 gameController.Hp += 10;
-                audioManager.Play("Collect");
+                audioManager.Play(SFX.COLLECTSFX);
                 Destroy(other.gameObject);
                 break;
             case "Death":
@@ -235,13 +235,7 @@ public class PlayerMovement : MonoBehaviour
             jumpForce = normalforce;
         }
     }
-
-
-
-
-
-
-
+    
     private void ResetValues()
     {
         jump = false;

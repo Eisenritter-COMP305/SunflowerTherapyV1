@@ -3,22 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using System;
+using JetBrains.Annotations;
+using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    public GameObject portal;
+    [CanBeNull] public GameObject portal;
     public GameObject player;
     public GameObject cm;
-    
+    public bool sceneChange;
+    public bool sceneChange2;
+
 
 
     public void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.T))
         {
-            // StartCoroutine(Teleport());
-            Teleport();
-
+            if (sceneChange)
+            {
+                SceneManager.LoadScene("Level2");
+            }
+            if (sceneChange2)
+            {
+                SceneManager.LoadScene("Level3");
+            }
+                // StartCoroutine(Teleport());
+                Teleport();
         }
     }
 
